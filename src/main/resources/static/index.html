@@ -89,12 +89,8 @@
     function splitFile(file, fileNum, chunkSize, fileSize) {
         let fileArray = []
         let start = 0;
-        if (fileNum === 1) {
-            fileArray.push(file);
-            return fileArray;
-        }
 
-        for (let i = 0; i < fileNum - 1; i++) {
+        for (let i = 1; i <= fileNum - 1; i++) {
             let subFile = file.slice(start, start + chunkSize)
             fileArray.push(subFile);
             start += chunkSize;
