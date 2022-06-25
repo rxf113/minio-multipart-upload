@@ -204,13 +204,4 @@ class TestDemo {
         System.out.println(builder);
     }
 
-    @Test
-    void fg() {
-        int unit = 5;
-        for (int i = 1; i < 100; i++) {
-            int res = i / unit;
-            System.out.printf("\ni: %d, res: %d", i, res);
-        }
-    }
-
 }
