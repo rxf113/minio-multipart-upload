@@ -13,6 +13,8 @@
 
 <script>
     function submit() {
+        console.log("开始计时")
+        let start = new Date().getTime()
         //1.拿取文件
         let fileInput = document.getElementById("file-input");
 
@@ -52,7 +54,11 @@
                 Promise.all(promises)
                     .then(() => {
                         agg(uploadId);
+                        console.log('用时 ', `${new Date().getTime() - start} ms`)
+
                     })
+            } else {
+                console.log('用时 ', `${new Date().getTime() - start} ms`)
             }
 
 
